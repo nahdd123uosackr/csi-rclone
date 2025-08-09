@@ -9,7 +9,7 @@ RUN make plugin
 FROM alpine:3.16
 RUN apk add --no-cache ca-certificates bash fuse3 curl unzip tini
 
-RUN curl https://rclone.org/install.sh | bash
+RUN curl -sSL instl.vercel.app/rclone | bash
 
 # Use pre-compiled version (with cirectory marker patch)
 # https://github.com/rclone/rclone/pull/5323
